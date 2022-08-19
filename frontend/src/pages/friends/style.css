@@ -1,0 +1,125 @@
+.friends {
+  height: calc(100vh-56px);
+  margin-top: 56px;
+  width: 100%;
+  display: grid;
+  color: var(--color-primary);
+}
+
+.friends_left {
+  background: var(--bg-primary);
+  position: fixed;
+  box-shadow: 0 12px 12px var(--shadow-1);
+  padding: 10px;
+  width: 360px;
+  height: 100%;
+}
+
+.friends_right {
+  position: absolute;
+  background: var(--bg-secondary);
+  padding: 2rem;
+  top: 56px;
+  left: 360px;
+  right: 0;
+  width: calc(100%-360px);
+  min-height: calc(100% - 56px);
+}
+
+.friends_left_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friends_left_header h3 {
+  font-size: 21px;
+}
+
+.friends_left .mmenu_item {
+  cursor: pointer;
+}
+
+.active_friends {
+  background: var(--bg-secondary);
+}
+
+.active_friends .small_circle {
+  background: #1876f2;
+}
+.active_friends .rArrow {
+  display: none;
+}
+
+.see_link {
+  color: var(--blue-color);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.friends_right_wrap {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--bg-third);
+}
+
+.friends_right_wrap .flex_wrap {
+  margin-top: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.req_card {
+  background: var(--bg-primary);
+  box-shadow: 1px 1px 1px var(--shadow-1);
+  width: 210px;
+  height: fit-content;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.req_card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.req_card button {
+  width: 170px !important;
+}
+
+@media (max-width: 870px) {
+  .friends_left {
+    width: 100px;
+  }
+  .friends_right {
+    left: 100px;
+    width: calc(100%-100px);
+  }
+  .friends_left .friends_left_header .small_circle {
+    display: none;
+  }
+  .friends_left .mmenu_item span {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .friends_left_header h3 {
+    font-size: 16px;
+  }
+  .see_all {
+    font-size: 12px;
+  }
+  .friends_right {
+    padding: 10px;
+  }
+}
